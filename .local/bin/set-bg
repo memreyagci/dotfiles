@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale $HOME/Pictures/pine_trees_and_mountain.jpg 

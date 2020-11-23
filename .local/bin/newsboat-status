@@ -1,0 +1,20 @@
+# https://github.com/memreyagci/newsboat-status
+
+# A bash script that prints the number of unread RSS feeds from newsboat
+# For the icon to work, Font awesome needs to be installed. See: https://github.com/FortAwesome/Font-Awesome
+# If you don't want any icon, add a text or anything, just edit after "echo" however you like. $unread variable is the number of unread RSS feeds.
+
+icon=
+
+while true
+do
+    if [ -z $(pgrep newsboat) ]
+    then
+        newsboat -x=reload
+        unread=$(awk -F" unread" '{print$1}' <<<$(newsboat -x=print-unread))
+        echo "$icon : $unread"
+        break
+    else
+        sleep 5
+    fi
+done
