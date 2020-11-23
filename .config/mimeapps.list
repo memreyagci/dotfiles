@@ -1,0 +1,14 @@
+[Default Applications]
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+image/jpg=sxiv.desktop
+image/png=sxiv.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-Y6FIT0.desktop
+message/rfc822=userapp-Thunderbird-Y6FIT0.desktop
+application/pdf=org.pwmt.zathura.desktop
+image/jpeg=sxiv.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-Y6FIT0.desktop;
+message/rfc822=userapp-Thunderbird-Y6FIT0.desktop;
