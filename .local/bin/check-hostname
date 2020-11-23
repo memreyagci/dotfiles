@@ -1,0 +1,5 @@
+if [ $HOSTNAME == "X200" ]; then
+    exec dwm
+elif [ $HOSTNAME == "x1c5" ]; then
+    exec i3 
+fi
