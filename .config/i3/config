@@ -6,7 +6,6 @@ set $mod Mod4
 exec_always --no-startup-id polybar-launch
 exec_always --no-startup-id xinput --set-prop "Synaptics TM3289-002" "libinput Tapping Enabled" 1
 exec --no-startup-id synclient VertScrollDelta=-111 # For reverse-scrolling
-exec_always --no-startup-id set-bg #Wallpaper
 exec xrdb $HOME/.Xresources
 exec_always --no-startup-id xautolock -time 3 -locker i3lock --show-failed-attempts --color "$bg-color"
 
