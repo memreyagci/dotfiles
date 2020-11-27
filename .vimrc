@@ -24,7 +24,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-syntastic/syntastic'
-execute pathogen#infect()
 
 call plug#end()
 
@@ -33,5 +32,6 @@ colorscheme gruvbox
 
 let python_highlight_all=1
 
+execute pathogen#infect()
 
 "Comment line
