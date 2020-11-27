@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ $HOSTNAME == "X200" ]; then
     exec dwm
     exec dwmblock
