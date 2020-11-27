@@ -18,6 +18,7 @@ alias ls='ls -l --group-directories-first --color=auto'
 alias uu='udiskie-umount'
 alias um='udiskie-mount'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/repos/dotfiles --work-tree=$HOME'
+alias irssi='irssi --config=$HOME/.config/irssi/config'
 
 export PATH=$HOME/.local/bin:$PATH
 export TERMINAL=st
