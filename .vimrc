@@ -22,10 +22,16 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'ycm-core/YouCompleteMe'
+Plug 'vim-syntastic/syntastic'
+execute pathogen#infect()
 
 call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
+
+let python_highlight_all=1
+
 
 "Comment line
