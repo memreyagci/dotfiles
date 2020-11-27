@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if [ $HOSTNAME == "X200" ]; then
-    exec dwm
-    exec dwmblock
+    exec dwm &
+    exec dwmblocks
 elif [ $HOSTNAME == "x1c5" ]; then
-    exec i3 
+    exec i3
 fi
