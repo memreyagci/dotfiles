@@ -153,7 +153,7 @@ bindsym Print exec flameshot full -p $HOME/Pictures/screenshots
 # Application shortcuts
 bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Shift+q kill
-bindsym $mod+shift+x exec --no-startup-id slock
+bindsym --release $mod+shift+x exec --no-startup-id slock
 
 bindsym $mod+shift+f exec firefox
 bindsym $mod+shift+b exec brave
