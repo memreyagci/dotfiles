@@ -149,7 +149,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 
 
 bindsym XF86TouchpadToggle exec $HOME/.config/i3/toggletouchpad.sh # toggle touchpad
-bindsym Print exec flameshot full -p Pictures/
+bindsym Print exec flameshot full -p $HOME/Pictures/screenshots
 
 # Application shortcuts
 bindsym $mod+Return exec --no-startup-id st
