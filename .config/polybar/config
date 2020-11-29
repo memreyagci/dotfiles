@@ -24,7 +24,8 @@ font-1 = Font Awesome 5 Free Solid:style=Solid:pixelsize=11;2
 font-2 = Font Awesome 5 Regular:pixelsize=13;3
 font-3 = Font Awesome 5 Brands:style=Regular:pixelsize=13;3
 font-4 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=13;3
-font-5 = San Francisco Display:13;3
+font-5 = Noto Color Emoji:style=Regular:scale=7;3
+font-6 = San Francisco Display:13;3
 
 modules-center = date
 modules-right = newsboat xkeyboard wireless-network wired-network backlight pulseaudio battery powermenu
