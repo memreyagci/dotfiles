@@ -6,7 +6,6 @@ set $mod Mod4
 exec_always --no-startup-id polybar-launch
 exec_always --no-startup-id xinput --set-prop "Synaptics TM3289-002" "libinput Tapping Enabled" 1
 exec --no-startup-id synclient VertScrollDelta=-111 # For reverse-scrolling
-exec_always --no-startup-id xautolock -time 3 -locker i3lock --show-failed-attempts --color "$bg-color"
 
 
 ###########################################
@@ -154,7 +153,7 @@ bindsym Print exec flameshot full -p $HOME/Pictures/screenshots
 # Application shortcuts
 bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Shift+q kill
-bindsym $mod+shift+x exec --no-startup-id i3lock --show-failed-attempts --color "$bg-color"
+bindsym $mod+shift+x exec --no-startup-id slock
 
 bindsym $mod+shift+f exec firefox
 bindsym $mod+shift+b exec brave
