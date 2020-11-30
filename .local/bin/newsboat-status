@@ -10,7 +10,7 @@ icon=
 
 while true
 do
-    if [ -z $(pgrep newsboat) ]
+    if [ -z "$(pgrep -x newsboat)" ]
     then
         newsboat -x=reload
         unread=$(awk -F" unread" '{print$1}' <<<$(newsboat -x=print-unread))
