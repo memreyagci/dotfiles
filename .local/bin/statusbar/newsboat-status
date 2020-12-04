@@ -14,7 +14,7 @@ do
     then
         newsboat -x=reload
         unread=$(awk -F" unread" '{print$1}' <<<$(newsboat -x=print-unread))
-        echo "$icon : $unread"
+        printf "$icon : $unread"
         break
     else
         sleep 5

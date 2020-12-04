@@ -1,0 +1,15 @@
+#!/bin/sh
+
+icon_lightbulb=""
+icon_monitor=""
+
+brightness=$(xbacklight -get 2>/dev/null | sed 's/\..*//')
+
+
+
+if [ -z $brightness ]; then
+    printf "$icon_lightbulb $icon_monitor"
+else
+    printf "$icon_lightbulb $brightness%%"
+fi
+
