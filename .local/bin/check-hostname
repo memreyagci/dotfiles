@@ -1,8 +1,7 @@
 #!/bin/sh
 
 if [ $HOSTNAME == "X200" ]; then
-    dwmblocks &
-    exec dwm
+    setxkbmap -layout us,tr,ar
 elif [ $HOSTNAME == "x1c5" ]; then
-    exec i3
+    setxkbmap -layout gb,tr,ar
 fi
