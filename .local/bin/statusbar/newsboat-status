@@ -10,13 +10,15 @@ icon=
 
 while true
 do
-    if [ -z "$(pgrep -x newsboat)" ]
-    then
-        newsboat -x=reload
-        unread=$(awk -F" unread" '{print$1}' <<<$(newsboat -x=print-unread))
-        printf "$icon $unread"
-        break
-    else
-        sleep 5
-    fi
+#    if [ -z "$(pgrep -x newsboat)" ]
+#    then
+#        newsboat -x=reload
+#        unread=$(awk -F" unread" '{print$1}' <<<$(newsboat -x=print-unread))
+#        printf "$icon $unread"
+#        break
+#    else
+#        sleep 5
+#    fi
+    [ -z "$(pgrep -x newsboat)" ] && printf "$icon $(awk -F" unread" '{print$1}' <<<$(newsboat -x=print-unread))" && exit || sleep 5
 done
+

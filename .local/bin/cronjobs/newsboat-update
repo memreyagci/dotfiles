@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ping -q -c 1 dd.gg > /dev/null || exit
+
+/usr/bin/notify-send "Updating RSS feeds.."
+/usr/bin/newsboat -x reload
+/usr/bin/notify-send "RSS feeds are updated."
+
+pkill -RTMIN+11 dwmblocks

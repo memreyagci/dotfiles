@@ -19,6 +19,7 @@ alias uu='udiskie-umount'
 alias um='udiskie-mount'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/repos/dotfiles --work-tree=$HOME'
 alias irssi='irssi --config=$HOME/.config/irssi/config'
+alias newsboat='newsboat; pkill -RTMIN+11 dwmblocks'
 
 export EDITOR=vim
 export PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/bin/cronjobs:$PATH
