@@ -20,7 +20,8 @@ alias um='udiskie-mount'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/repos/dotfiles --work-tree=$HOME'
 alias irssi='irssi --config=$HOME/.config/irssi/config'
 
-export PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$PATH
+export EDITOR=vim
+export PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/bin/cronjobs:$PATH
 export TERMINAL=st
 export BROWSER=firefox
 export BROWSER2=brave
