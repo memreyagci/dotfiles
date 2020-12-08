@@ -1,3 +1,3 @@
 #!/bin/sh
 
-[ $HOSTNAME == "X200" ] && setxkbmap -layout us,tr,ar && exit || [ $HOSTNAME == "x1c5" ] && setxkbmap -layout us,tr,ar && exit
+[ $HOSTNAME == "X200" ] && setxkbmap -layout us,tr,ar && exit || [ $HOSTNAME == "x1c5" ] && setxkbmap -layout gb,tr,ar && exit
