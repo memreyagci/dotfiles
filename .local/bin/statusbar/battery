@@ -1,11 +1,11 @@
 #!/bin/sh
 
-icon_full=""
-icon_three_quarters=""
-icon_half=""
-icon_quarter=""
-icon_empty=""
-icon_charging=""
+icon_full="🔋"
+icon_three_quarters="🔋"
+icon_half="🔋"
+icon_quarter="🔋"
+icon_empty="🔋"
+icon_charging="🔌"
 
 for battery in /sys/class/power_supply/BAT?
 do

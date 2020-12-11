@@ -1,6 +1,6 @@
 #!/bin/sh
 
-icon_lightbulb=""
+icon_lightbulb="💡"
 icon_monitor=""
 
 brightness=$(xbacklight -get 2>/dev/null | sed 's/\..*//')

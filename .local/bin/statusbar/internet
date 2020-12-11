@@ -1,8 +1,8 @@
 #!/bin/sh
 
-icon_wifi=
-icon_ethernet=""
-icon_not_connected=
+icon_wifi=📡
+icon_ethernet="🌐"
+icon_not_connected=⛔
 
 #status_wifi=$(nmcli device status | grep "w.*")
 

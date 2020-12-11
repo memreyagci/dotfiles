@@ -6,7 +6,7 @@
 # For the icon to work, Font awesome needs to be installed. See: https://github.com/FortAwesome/Font-Awesome
 # If you don't want any icon, add a text or anything, just edit after "echo" however you like. $unread variable is the number of unread RSS feeds.
 
-icon=
+icon=📰
 
 while true
 do

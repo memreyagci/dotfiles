@@ -1,9 +1,9 @@
 #!/bin/sh
 
-icon_muted=""
-icon_less=""
-icon_half=""
-icon_much=""
+icon_muted="🔇"
+icon_low="🔈"
+icon_medium="🔉"
+icon_high="🔊"
 
 volume=$(pactl list sinks | grep '^[[:space:]]Volume:' | \
     head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
@@ -11,9 +11,9 @@ volume=$(pactl list sinks | grep '^[[:space:]]Volume:' | \
 if [ "$(pactl list sinks | grep 'Mute: yes')" ]; then
     printf "$icon_muted"
 elif [ $volume -ge 75 ]; then
-    printf "$icon_much $volume%%"
+    printf "$icon_high $volume%%"
 elif [ $volume -ge 15 ]; then
-    printf "$icon_half $volume%%"
+    printf "$icon_medium $volume%%"
 else
-    printf "$icon_less $volume%%"
+    printf "$icon_low $volume%%"
 fi
