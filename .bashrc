@@ -5,8 +5,19 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+git_data() {
+    if [ -d .git ]
+    then
+        git status 2> /dev/null | grep "working tree clean" &> /dev/null
+        if [ $? -ne 0 ]; then STATUS="!"; else STATUS=""; fi
+        echo -n " (`git branch 2>/dev/null | grep '^*' | colrm 1 2`$STATUS)"
+    fi
+}
+                                                
+
 #PS1='[\u@\h \W]\$ '
-PS1='\[\e[01;36m\][ \u@\h\[\e[01m\] \[\e[01;32m\]\w \[\e[01;36m\]]\[\e[00m\]$ '
+#PS1='\[\e[01;36m\][ \u@\h\[\e[01m\] \[\e[01;32m\]\w \[\e[01;36m\]]\[\e[00m\]$ '
+PS1='\[\e[01;33m\][ \e[01;36m\]\u@\h\[\e[01m\] \[\e[01;32m\]\w\[\e[01;34m\]$(git_data) \e[01;33m\]]\[\e[00m\]$ '
 
 set -o vi # Vim mode for bash
 bind '"\C-l": clear-screen'
