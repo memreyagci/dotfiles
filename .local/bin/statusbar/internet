@@ -1,10 +1,8 @@
 #!/bin/sh
 
-icon_wifi=📡
-icon_ethernet="🌐"
+icon_wifi=📶
+icon_ethernet=🌐
 icon_not_connected=⛔
-
-#status_wifi=$(nmcli device status | grep "w.*")
 
 if [ "$(nmcli device status | grep "w.*" | grep -w 'connected' )" ]; then
     ssid=$(nmcli -t -f active,ssid dev wifi | egrep '^yes' | cut -d\: -f2)
