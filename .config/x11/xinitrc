@@ -3,7 +3,6 @@ flameshot &
 udiskie &
 xautolock -time 3 -locker slock &
 xcompmgr &
-xrdb $XDG_CONFIG_HOME/x11/xresources &
 check-hostname
 setxkbmap -option 'grp:alt_shift_toggle'
 set-bg
