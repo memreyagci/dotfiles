@@ -30,8 +30,9 @@ call plug#end()
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 
+let g:airline_powerline_fonts = 1
 let python_highlight_all=1
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 "Comment line

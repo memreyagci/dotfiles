@@ -48,9 +48,9 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/repos/dotfiles --work-tre
 alias irssi='irssi --config=$HOME/.config/irssi/config'
 alias newsboat='newsboat; pkill -RTMIN+11 dwmblocks'
 alias wget='wget --hsts-file=$XDG_CACHE_HOME/wget-hsts'
-alias ovim='vim $(fzf -e)'
+alias ovim='nvim $(fzf -e)'
 
-export EDITOR=vim
+export EDITOR=nvim
 export PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/bin/cronjobs:$PATH
 export TERMINAL=st
 export BROWSER=firefox
