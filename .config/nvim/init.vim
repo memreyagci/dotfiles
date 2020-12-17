@@ -12,7 +12,7 @@ set incsearch
 set relativenumber
 set background=dark
 
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'flrnd/candid.vim'
