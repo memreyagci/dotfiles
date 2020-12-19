@@ -49,6 +49,7 @@ alias irssi='irssi --config=$HOME/.config/irssi/config'
 alias newsboat='newsboat; pkill -RTMIN+11 dwmblocks'
 alias wget='wget --hsts-file=$XDG_CACHE_HOME/wget-hsts'
 alias ovim='nvim $(fzf -e)'
+alias v='nvim'
 
 export EDITOR=nvim
 export PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/bin/cronjobs:$PATH
