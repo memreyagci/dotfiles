@@ -19,6 +19,6 @@ do
 #    else
 #        sleep 5
 #    fi
-    [ -z "$(pgrep -x newsboat)" ] && printf "$icon $(awk -F" unread" '{print$1}' <<<$(newsboat -x=print-unread))" && exit || sleep 5
+    [ -z "$(pgrep -x newsboat)" ] && printf "$icon$(awk -F" unread" '{print$1}' <<<$(newsboat -x=print-unread))" && exit || sleep 5
 done
 

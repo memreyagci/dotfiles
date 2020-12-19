@@ -1,10 +1,6 @@
 #!/bin/sh
 
-icon_full="🔋"
-icon_three_quarters="🔋"
-icon_half="🔋"
-icon_quarter="🔋"
-icon_empty="🔋"
+icon_battery="🔋"
 icon_charging="🔌"
 
 for battery in /sys/class/power_supply/BAT?
@@ -16,21 +12,11 @@ do
         if [ $capacity -ge 99 ]; then
             printf "$icon_charging Full"
         else
-            printf "$icon_charging $capacity%%"
+            printf "$icon_charging$capacity%%"
         fi
     elif [ $status == "Discharging" ]; then
-        if [ $capacity -ge 90 ]; then
-            printf "$icon_full $capacity%%"
-        elif [ $capacity -ge 75 ]; then
-            printf "$icon_three_quarters $capacity%%"
-        elif [ $capacity -ge 50 ]; then
-            printf "$icon_half $capacity%%"
-        elif [ $capacity -ge 15 ]; then
-            printf "$icon_quarter $capacity%%"
-        else
-            printf "$icon_empty $capacity%%"
-        fi
+        printf "$icon_battery$capacity%%"
     else
-        printf "$status $capacity%%"
+        printf "$status$capacity%%"
     fi
 done

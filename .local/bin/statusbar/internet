@@ -6,7 +6,7 @@ icon_not_connected=⛔
 
 if [ "$(nmcli device status | grep "w.*" | grep -w 'connected' )" ]; then
     ssid=$(nmcli -t -f active,ssid dev wifi | egrep '^yes' | cut -d\: -f2)
-    printf "$icon_wifi $ssid"
+    printf "$icon_wifi$ssid"
 else
-    printf "$icon_wifi $icon_not_connected"
+    printf "$icon_wifi$icon_not_connected"
 fi

@@ -11,9 +11,9 @@ volume=$(pactl list sinks | grep '^[[:space:]]Volume:' | \
 if [ "$(pactl list sinks | grep 'Mute: yes')" ]; then
     printf "$icon_muted"
 elif [ $volume -ge 75 ]; then
-    printf "$icon_high $volume%%"
+    printf "$icon_high$volume%%"
 elif [ $volume -ge 15 ]; then
-    printf "$icon_medium $volume%%"
+    printf "$icon_medium$volume%%"
 else
-    printf "$icon_low $volume%%"
+    printf "$icon_low$volume%%"
 fi

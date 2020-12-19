@@ -5,5 +5,5 @@ icon_monitor=""
 
 brightness=$(xbacklight -get 2>/dev/null | sed 's/\..*//')
 
-[ -z $brightness ] && printf "$icon_lightbulb $icon_monitor" || printf "$icon_lightbulb $brightness%%"
+[ -z $brightness ] && printf "$icon_lightbulb$icon_monitor" || printf "$icon_lightbulb$brightness%%"
 
