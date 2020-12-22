@@ -2,11 +2,34 @@
 
 icon_wifi=📶
 icon_ethernet=🌐
-icon_not_connected=⛔
+icon_disconnected=⛔
 
-if [ "$(nmcli device status | grep "w.*" | grep -w 'connected' )" ]; then
-    ssid=$(nmcli -t -f active,ssid dev wifi | egrep '^yes' | cut -d\: -f2)
-    printf "$icon_wifi$ssid"
-else
-    printf "$icon_wifi$icon_not_connected"
-fi
+wifi_exists=0
+ethernet_exists=0
+
+nmcli device status > /tmp/connections
+
+total_lines=$(wc -l /tmp/connections | awk '{print $1}')
+connections=''
+
+for (( line=2; line<=$total_lines; line++ ))
+do
+    current_line=$(awk "NR==$line {print; exit}" /tmp/connections)
+    echo $current_line | awk '{print $2}' > /tmp/connection_type
+    echo $current_line | awk '{print $3}' > /tmp/connection_status
+
+    if [ $(cat /tmp/connection_type) == "ethernet" ] && [ $(cat /tmp/connection_status) == "connected" ]; then
+        ethernet_exists=1
+        read var1 var2 var3 connection_name <<< $current_line
+        connections="$connections $icon_ethernet$connection_name "
+    elif [ $(cat /tmp/connection_type) == "wifi" ] && [ $(cat /tmp/connection_status) == "connected" ]; then
+        wifi_exists=1
+        read var1 var2 var3 connection_name <<< $current_line
+        connections="$connections$icon_wifi$connection_name "
+    fi
+done
+
+[ $ethernet_exists == 0 ] && connections="$connections$icon_ethernet$icon_disconnected "
+[ $wifi_exists == 0 ] && connections="$connections$icon_wifi$icon_disconnected "
+
+echo $connections
