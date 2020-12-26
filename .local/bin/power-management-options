@@ -1,0 +1,21 @@
+#!/bin/sh
+
+chosen=$(echo -e "cancel\nsuspend\nhibernate\npoweroff" | dmenu -i -p "What do you want to do?")
+
+case $chosen in
+    "cancel")
+        exit
+        ;;
+
+    "suspend")
+        systemctl suspend
+        ;;
+
+    "hibernate")
+        systemctl hibernate
+        ;;
+
+    "poweroff")
+        systemctl poweroff
+        ;;
+esac
