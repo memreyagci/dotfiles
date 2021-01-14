@@ -1,0 +1,17 @@
+#!/bin/sh
+
+alias \
+    cp="cp -iv" \
+    dotfiles="/usr/bin/git --git-dir=$HOME/Documents/repos/dotfiles --work-tree=$HOME" \
+    email="$HOME/.local/bin/cronjobs/mail-update; $EMAIL" \
+    irssi="irssi --config=$HOME/.config/irssi/config" \
+    ls="ls -l --group-directories-first --color=auto" \
+    mkdir="mkdir -pv" \
+    mv="mv -iv" \
+    newsboat="newsboat; pkill -RTMIN+11 dwmblocks" \
+    ovim="nvim \$(fzf -e)" \
+    rm="rm -vI" \
+    um="udiskie-mount" \
+    uu="udiskie-umount" \
+    v="nvim" \
+    wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts" 
