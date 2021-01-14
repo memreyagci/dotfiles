@@ -37,16 +37,16 @@ let python_highlight_all=1
 let mapleader = " "
 
 " Shortcuts for window operations.
-nnoremap <leader>h :wincmd h<CR> 
-nnoremap <leader>j :wincmd j<CR> 
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR> 
+nnoremap <silent> <leader>h :wincmd h<CR> 
+nnoremap <silent> <leader>j :wincmd j<CR> 
+nnoremap <silent> <leader>k :wincmd k<CR>
+nnoremap <silent> <leader>l :wincmd l<CR> 
 
-nnoremap <leader>n :wincmd n<CR> 
-nnoremap <leader>v :wincmd v<CR> 
+nnoremap <silent> <leader>n :wincmd n<CR> 
+nnoremap <silent> <leader>v :wincmd v<CR> 
 
-nnoremap <leader>c :wincmd c<CR> 
-nnoremap <leader>o :wincmd o<CR> 
+nnoremap <silent> <leader>c :wincmd c<CR> 
+nnoremap <silent> <leader>o :wincmd o<CR> 
 
 nnoremap <silent> <leader>+ :vertical resize +5<CR> 
 nnoremap <silent> <leader>- :vertical resize -5<CR> 
