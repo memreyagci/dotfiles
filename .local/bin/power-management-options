@@ -8,15 +8,15 @@ case $chosen in
         ;;
 
     "suspend")
-        slock -m "Locked at $(date +'%I:%M %p')" && systemctl suspend
+        systemctl suspend && slock -m "Locked at $(date +'%I:%M %p')" 
         ;;
 
     "hibernate")
-        slock -m "Locked at $(date +'%I:%M %p')" && systemctl hibernate
+        systemctl hibernate && slock -m "Locked at $(date +'%I:%M %p')"  
         ;;
 
     "hybrid-sleep")
-        slock -m "Locked at $(date +'%I:%M %p')" & systemctl hybrid-sleep
+        systemctl hybrid-sleep && slock -m "Locked at $(date +'%I:%M %p')" 
         ;;
 
     "reboot")
