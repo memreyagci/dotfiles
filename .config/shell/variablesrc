@@ -14,8 +14,7 @@ export \
     TERMINFO=$XDG_DATA_HOME/terminfo \
     TERMINFO_DIRS=$XDG_DATA_HOME/terminfo:/usr/share/terminfo \
     XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority \
-    XDG_CONFIG_HOME=$HOME/.config \
-    XINITRC=$XDG_CONFIG_HOME/X11/xinitrc 
+    XINITRC=$XDG_CONFIG_HOME/x11/xinitrc 
 
 export LF_ICONS="\
 tw=:\
@@ -23,7 +22,6 @@ st=:\
 ow=:\
 dt=:\
 di=:\
-Documents=\
 fi=:\
 ln=:\
 or=:\
