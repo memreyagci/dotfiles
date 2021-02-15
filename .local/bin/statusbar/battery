@@ -3,18 +3,21 @@
 icon_battery="🔋"
 icon_charging="🔌"
 
+hibernate () {
+    notify-send "Critical battery level ($capacity%).\nHibernating the device.."
+    systemctl hibernate
+}
+
 for battery in /sys/class/power_supply/BAT?
 do
     capacity=$(cat "$battery"/capacity)
     status=$(cat "$battery"/status)
 
-    if [[ $status == "Charging" || $status == "Unknown" ]]; then
-        [ $capacity -ge 99 ] && printf "${icon_charging}Full" || printf "$icon_charging$capacity%%"
+    if [[ $status == "Charging" || $status == "Full" || $status == "Unknown" ]]; then
+        [ $capacity -ge 99 ] && printf "${icon_charging}Full" && break || printf "$icon_charging$capacity%%" && break
     elif [ $status == "Discharging" ]; then
-        [[ $capacity == 20 || $capacity == 10 ]] && { notify-send "Battery is low: $capacity%"; printf "$icon_battery$capacity%%"; } || {
-        [ $capacity -le 5 ] && { notify-send "Critical battery level ($capacity%).\nHibernating the device.."; printf "$icon_battery$capacity"; systemctl hibernate; } } ||
-        printf "$icon_battery$capacity%%"
-    else
-        printf "$status$capacity%%"
+        printf "$icon_battery$capacity%%"; 
+        [[ $capacity -eq 20 || $capacity -eq 10 ]] && notify-send "Battery is low: $capacity%" && break ||
+        [ $capacity -le 5 ] && hibernate && break
     fi
 done
