@@ -53,6 +53,11 @@ nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR> 
 nnoremap <silent> <leader>= :wincmd =<CR> 
 
+nnoremap <C-p> :GFiles<CR>
+
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+
 "Comment line
 
 " Use <Tab> and <S-Tab> to navigate the completion list:
