@@ -15,8 +15,6 @@ set tabstop=4 softtabstop=4
 
 call plug#begin()
 
-Plug 'PotatoesMaster/i3-vim-syntax'
-Plug 'flrnd/candid.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -24,7 +22,6 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-syntastic/syntastic'
 Plug 'vim-python/python-syntax'
 Plug 'dense-analysis/ale'
 
