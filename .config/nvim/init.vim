@@ -26,8 +26,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-python/python-syntax'
+Plug 'dense-analysis/ale'
 
 call plug#end()
+
+let g:ale_fixers = {'python': ['black', 'isort']}
+let g:ale_fix_on_save = 1
 
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
