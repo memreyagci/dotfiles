@@ -24,6 +24,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-python/python-syntax'
 Plug 'dense-analysis/ale'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
