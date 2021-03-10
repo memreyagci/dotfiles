@@ -5,9 +5,10 @@ alias \
     dotfiles="/usr/bin/git --git-dir=$HOME/Documents/repos/dotfiles --work-tree=$HOME" \
     email="$HOME/.local/bin/cronjobs/mail-update; $EMAIL" \
     irssi="irssi --config=$HOME/.config/irssi/config" \
-    ls="ls -l --group-directories-first --color=auto" \
+    ls="exa -l --group-directories-first --color=auto --group" \
     mkdir="mkdir -pv" \
     mv="mv -iv" \
+    neomutt="neomutt; pkill -RTMIN+2 dwmblocks" \
     newsboat="newsboat; pkill -RTMIN+11 dwmblocks" \
     ovim="nvim \$(fzf -e)" \
     rm="rm -vI" \
