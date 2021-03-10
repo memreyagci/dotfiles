@@ -9,7 +9,7 @@ export \
     IPYTHONDIR=$XDG_CONFIG_HOME/jupyter \
     JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter  \
     LESSHISTFILE=- \
-    PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/bin/cronjobs:$PATH \
+    PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/bin/cronjobs:$HOME/.local/bin/applications:$PATH:$HOME/.local/bin/node/bin \
     TERMINAL=st \
     TERMINFO=$XDG_DATA_HOME/terminfo \
     TERMINFO_DIRS=$XDG_DATA_HOME/terminfo:/usr/share/terminfo \
