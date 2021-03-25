@@ -8,7 +8,7 @@
 export XDG_CONFIG_HOME=$HOME/.config 
     
 # Source files from $XDG_CONFIG_HOME/shell
-[ -f "$XDG_CONFIG_HOME/shell/promptrc" ] && source "$XDG_CONFIG_HOME/shell/promptrc" # Bash prompt
+[ -f "$XDG_CONFIG_HOME/bash/promptrc" ] && source "$XDG_CONFIG_HOME/bash/promptrc" # Bash prompt
 [ -f "$XDG_CONFIG_HOME/shell/aliasrc" ] && source "$XDG_CONFIG_HOME/shell/aliasrc" # Aliases
 [ -f "$XDG_CONFIG_HOME/shell/variablesrc" ] && source "$XDG_CONFIG_HOME/shell/variablesrc" # Environmental variables
 
