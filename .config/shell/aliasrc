@@ -15,4 +15,6 @@ alias \
     um="udiskie-mount" \
     uu="udiskie-umount" \
     v="nvim" \
+    vea=". venv/bin/activate" \
+    ved="deactivate" \
     wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts" 
