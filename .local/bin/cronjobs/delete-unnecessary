@@ -1,0 +1,20 @@
+#!/bin/sh
+
+UNNECESSARY=(
+    "$HOME/.electron-gyp"
+    "$HOME/.node-gyp"
+    "$HOME/.npm"
+    "$HOME/.npmrc"
+    "$HOME/.nvm"
+    "$HOME/.pki"
+    "$HOME/.python_history"
+    "$HOME/.sqlite_history"
+    "$HOME/.swt"
+    "$HOME/.w3m"
+    "$HOME/.yarn"
+    "$HOME/.yarnrc"
+    )
+
+for unnecessary in "${UNNECESSARY[@]}"; do
+    rm -rf $unnecessary
+done
