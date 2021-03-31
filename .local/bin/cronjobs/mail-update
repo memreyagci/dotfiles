@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ping -q -c 1 dd.gg > /dev/null || exit
+
+#/usr/bin/notify-send "✉️ Checking for new emails."
+/usr/bin/mbsync -c /home/musa/.config/isync/mbsyncrc -a 2&>/dev/null
+#/usr/bin/notify-send "Emails are checked."
+
+pkill -RTMIN+2 dwmblocks 
