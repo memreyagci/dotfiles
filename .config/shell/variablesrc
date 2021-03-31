@@ -1,26 +1,29 @@
 #!/bin/sh
 
 export \
-    BROWSER=librewolf \
-    BROWSER2=brave \
+    BROWSER=firefox \
+    CARGO_HOME=$XDG_CONFIG_HOME/cargo \
     EDITOR=nvim \
     EMAIL=neomutt \
     GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc \
+    HISTFILE=$XDG_CONFIG_HOME/bash/history \
     IPYTHONDIR=$XDG_CONFIG_HOME/jupyter \
     JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter  \
     LESSHISTFILE=- \
-    PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/bin/cronjobs:$HOME/.local/bin/applications:$PATH:$HOME/.local/bin/node/bin \
+    PATH=$HOME/.local/bin:$HOME/.local/bin/scripts:$HOME/.local/bin/statusbar:$HOME/.local/bin/cronjobs:$HOME/.local/bin/applications:$PATH:$HOME/.local/bin/node/bin \
+    PYLINTHOME=$XDG_CACHE_HOME/pylint \
     TERMINAL=st \
     TERMINFO=$XDG_DATA_HOME/terminfo \
     TERMINFO_DIRS=$XDG_DATA_HOME/terminfo:/usr/share/terminfo \
     XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority \
-    XINITRC=$XDG_CONFIG_HOME/x11/xinitrc 
+    XINITRC=$XDG_CONFIG_HOME/x11/xinitrc \
+    ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
 export LF_ICONS="\
-tw=:\
-st=:\
-ow=:\
-dt=:\
+tw=:\
+st=:\
+ow=:\
+dt=:\
 di=:\
 fi=:\
 ln=:\
