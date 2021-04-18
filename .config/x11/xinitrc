@@ -7,5 +7,6 @@ check-hostname
 setxkbmap -option 'grp:alt_shift_toggle'
 set-bg
 signal-desktop --start-in-tray &
+sxhkd &
 dwmblocks &
 exec dwm
