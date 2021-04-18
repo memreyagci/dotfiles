@@ -1,9 +1,20 @@
 #!/bin/sh
 
+icon=
+
 ping -q -c 1 dd.gg > /dev/null || exit
 
-/usr/bin/notify-send "📰 Updating RSS feeds.."
-/usr/bin/newsboat -x reload;
-/usr/bin/notify-send "RSS feeds are updated."
+while true; do
+    if [ -z "$(pgrep -x newsboat)" ]; then
+        unread=$(newsboat -x=print-unread | awk '{print $1}')
+        /usr/bin/newsboat -x reload
+        unread_new=$(newsboat -x=print-unread | awk '{print $1}')
 
-pkill -RTMIN+11 dwmblocks
+        [ $unread != $unread_new ] && notify-send "There are $icon $(($unread_new - $unread)) new feed(s)."
+        pkill -RTMIN+11 dwmblocks
+        exit
+    else
+        sleep 60
+    fi
+done
+
