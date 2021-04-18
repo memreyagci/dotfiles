@@ -1,35 +1,32 @@
 #!/bin/sh
 
-icon_wifi=📶
-icon_ethernet=🌐
-icon_disconnected=⛔
+icon_wifi=
+icon_ethernet=
+icon_wifi_disconnected=
+icon_ethernet_disconnected=
 
-wifi_exists=0
-ethernet_exists=0
+IFS=$'\n'
 
-nmcli device status > /tmp/connections
+LINES=$(nmcli device status)
 
-total_lines=$(wc -l /tmp/connections | awk '{print $1}')
-connections=''
+ethernet_connections=""
+wifi_connections=""
 
-for (( line=2; line<=$total_lines; line++ ))
-do
-    current_line=$(awk "NR==$line {print; exit}" /tmp/connections)
-    echo $current_line | awk '{print $2}' > /tmp/connection_type
-    echo $current_line | awk '{print $3}' > /tmp/connection_status
+for line in $LINES; do
+    echo $line > /tmp/conn
 
-    if [ $(cat /tmp/connection_type) == "ethernet" ] && [ $(cat /tmp/connection_status) == "connected" ]; then
-        ethernet_exists=1
-        read var1 var2 var3 connection_name <<< $current_line
-        connections="$connections $icon_ethernet$connection_name "
-    elif [ $(cat /tmp/connection_type) == "wifi" ] && [ $(cat /tmp/connection_status) == "connected" ]; then
-        wifi_exists=1
-        read var1 var2 var3 connection_name <<< $current_line
-        connections="$connections$icon_wifi$connection_name "
+    if [ "$(awk '{print $3}' /tmp/conn)" == "connected" ]; then
+        if [ "$(awk '{print $2}' /tmp/conn)" == "ethernet" ]; then
+            conn_name="$(awk '{$1=$2=$3=""; print $0}' /tmp/conn | cut -d' ' -f3-)"
+            ethernet_connections="$ethernet_connections$icon_ethernet$conn_name"
+        elif [ "$(awk '{print $2}' /tmp/conn)" == "wifi" ]; then
+            conn_name="$(awk '{$1=$2=$3=""; print $0}' /tmp/conn | cut -d' ' -f3-)"
+            wifi_connections="$wifi_connections$icon_wifi$conn_name"
+        fi
     fi
 done
 
-[ $ethernet_exists == 0 ] && connections="$connections$icon_ethernet$icon_disconnected "
-[ $wifi_exists == 0 ] && connections="$connections$icon_wifi$icon_disconnected "
+[ "$ethernet_connections" == "" ] && ethernet_connections="$icon_ethernet$icon_ethernet_disconnected"
+[ "$wifi_connections" == "" ] && wifi_connections="$icon_wifi_disconnected"
 
-echo $connections
+printf "$ethernet_connections | $wifi_connections"

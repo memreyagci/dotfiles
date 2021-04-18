@@ -1,7 +1,7 @@
 #!/bin/sh
 
-icon_battery="🔋"
-icon_charging="🔌"
+icon_battery=""
+icon_charging=""
 
 hibernate () {
     notify-send "Critical battery level ($capacity%).\nHibernating the device.."
@@ -14,9 +14,9 @@ do
     status=$(cat "$battery"/status)
 
     if [[ $status == "Charging" || $status == "Full" || $status == "Unknown" ]]; then
-        [ $capacity -ge 99 ] && printf "${icon_charging}Full" && break || printf "$icon_charging$capacity%%" && break
+        [ $capacity -ge 99 ] && printf "${icon_charging} Full" && break || printf "$icon_charging $capacity%%" && break
     elif [ $status == "Discharging" ]; then
-        printf "$icon_battery$capacity%%"; 
+        printf "$icon_battery $capacity%%"; 
         [[ $capacity -eq 20 || $capacity -eq 10 ]] && notify-send "Battery is low: $capacity%" && break ||
         [ $capacity -le 5 ] && hibernate && break
     fi
