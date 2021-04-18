@@ -2,6 +2,7 @@
 
 UNNECESSARY=(
     "$HOME/.electron-gyp"
+    "$HOME/go"
     "$HOME/.node-gyp"
     "$HOME/.npm"
     "$HOME/.npmrc"
