@@ -27,3 +27,9 @@ XF86MonBrightness{Up,Down}
 
 super + f
     st -e lfrun
+
+super + o; {b,s,m,t,e}
+    {bitwarden-desktop,signal-desktop,teams,telegram-desktop,thunderbird}
+
+super + r; {d,s}
+    {pkill -9 dwmblocks; dwmblocks, pkill -9 sxhkd; sxhkd}
