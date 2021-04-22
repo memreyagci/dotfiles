@@ -22,7 +22,7 @@ else
 fi
 
 [ "$(pactl list sources | grep -A 10 'Source #1' | grep 'Mute: no')" ] &&
-    output="$output | $icon_microphone $(pactl list sources | grep -A 10 'Source #1' | grep 'Volume' | awk -F/ '{print $2}' | cut -d' ' -f3-)" ||
+    output="$output | $icon_microphone $(pactl list sources | grep -A 10 'Source #1' | grep 'Volume' | awk -F/ '{print $2}' | sed 's/ //g')" ||
     output="$output | $icon_microphone_off"
 
 echo $output
