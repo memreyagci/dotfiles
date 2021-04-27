@@ -9,4 +9,4 @@ set-bg
 signal-desktop --start-in-tray &
 sxhkd &
 dwmblocks &
-exec dwm
+exec i3

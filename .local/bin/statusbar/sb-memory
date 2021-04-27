@@ -1,5 +1,8 @@
 #!/bin/sh
 
-icon_memory=
+pango_start="<span font=\"Font Awesome 5 Pro Solid 9\">"
+pango_end="</span>"
 
-printf " $icon_memory $(free -h | awk '/^Mem/ { print $3"/"$2 }' | sed s/i//g)"
+icon_memory="$pango_start$pango_end"
+
+echo "$icon_memory $(free -h | awk '/^Mem/ { print $3"/"$2 }' | sed s/i//g)"

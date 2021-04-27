@@ -1,8 +1,11 @@
 #!/bin/sh
 
-icon=
+pango_start="<span font=\"Font Awesome 5 Pro Solid 9\">"
+pango_end="</span>"
+
+icon="$pango_start$pango_end"
 
 while true; do
-    [ -z "$(pgrep -x newsboat)" ] && printf "$icon $(newsboat -x=print-unread | awk '{print $1}')" && exit || sleep 60
+    [ -z "$(pgrep -x newsboat)" ] && echo "$icon $(newsboat -x=print-unread | awk '{print $1}')" && exit || sleep 60
 done
 

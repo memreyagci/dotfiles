@@ -1,12 +1,15 @@
 #!/bin/sh
 
-icon_muted=""
-icon_low=""
-icon_medium=""
-icon_high=""
+pango_start="<span font=\"Font Awesome 5 Pro Solid 9\">"
+pango_end="</span>"
 
-icon_microphone=""
-icon_microphone_off=""
+icon_muted="$pango_start$pango_end"
+icon_low="$pango_start$pango_end"
+icon_medium="$pango_start$pango_end"
+icon_high="$pango_start$pango_end"
+
+icon_microphone="$pango_start$pango_end"
+icon_microphone_off="$pango_start$pango_end"
 
 volume=$(pactl list sinks | grep '^[[:space:]]Volume:' | \
     head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')

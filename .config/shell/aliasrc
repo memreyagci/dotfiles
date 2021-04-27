@@ -3,13 +3,13 @@
 alias \
     cp="cp -iv" \
     dotfiles="/usr/bin/git --git-dir=$HOME/Documents/repos/dotfiles --work-tree=$HOME" \
-    email="$HOME/.local/bin/cronjobs/mail-update; $EMAIL" \
+    email="neomutt" \
     irssi="irssi --config=$HOME/.config/irssi/config" \
     ls="exa -l --group-directories-first --color=auto --group" \
     mkdir="mkdir -pv" \
     mv="mv -iv" \
-    neomutt="neomutt; pkill -RTMIN+2 dwmblocks" \
-    newsboat="newsboat; pkill -RTMIN+11 dwmblocks" \
+    neomutt="cj-mail; neomutt; cj-mail; pkill -RTMIN+2 i3blocks" \
+    newsboat="newsboat; pkill -RTMIN+11 i3blocks" \
     ovim="nvim \$(fzf -e)" \
     rm="rm -vI" \
     um="udiskie-mount" \

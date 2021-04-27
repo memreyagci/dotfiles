@@ -1,3 +1,6 @@
+super + shift + Return
+    $TERMINAL
+
 super + shift + q
     power-management-options
 
@@ -8,7 +11,7 @@ super + d
     dmenu_run
 
 super + e
-    /home/musa/.local/bin/cronjobs/mail-update; st -e neomutt; /home/musa/.local/bin/cronjobs/mail-update
+    /home/musa/.local/bin/cronjobs/cj-mail; st -e neomutt; /home/musa/.local/bin/cronjobs/cj-mail
 
 super + x
     slock -m "Locked at $(date +'%I:%M %p')"
@@ -20,10 +23,10 @@ super + Print
     flameshot gui
 
 XF86Audio{Mute,MicMute,RaiseVolume,LowerVolume}
-    pactl{ set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+10 dwmblocks, set-source-mute @DEFAULT_SOURCE@ toggle; pkill -RTMIN+10 dwmblocks,-increase; pkill -RTMIN+10 dwmblocks, set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+10 dwmblocks}
+    pactl{ set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+10 i3blocks, set-source-mute @DEFAULT_SOURCE@ toggle; pkill -RTMIN+10 i3blocks,-increase; pkill -RTMIN+10 i3blocks, set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+10 i3blocks}
 
 XF86MonBrightness{Up,Down}
-    xbacklight {-inc 5; pkill -RTMIN+5 dwmblocks,-dec 5; pkill -RTMIN+5 dwmblocks}
+    xbacklight {-inc 5; pkill -RTMIN+5 i3blocks,-dec 5; pkill -RTMIN+5 i3blocks}
 
 super + f
     st -e lfrun

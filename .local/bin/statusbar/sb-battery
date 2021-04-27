@@ -1,7 +1,10 @@
 #!/bin/sh
 
-icon_battery=""
-icon_charging=""
+pango_start="<span font=\"Font Awesome 5 Pro Solid 9\">"
+pango_end="</span>"
+
+icon_battery="$pango_start$pango_end"
+icon_charging="$pango_start$pango_end"
 
 hibernate () {
     notify-send "Critical battery level ($capacity%).\nHibernating the device.."
@@ -14,9 +17,9 @@ do
     status=$(cat "$battery"/status)
 
     if [[ $status == "Charging" || $status == "Full" || $status == "Unknown" ]]; then
-        [ $capacity -ge 99 ] && printf "${icon_charging} Full" && break || printf "$icon_charging $capacity%%" && break
+        [ $capacity -ge 99 ] && echo "${icon_charging} Full" && break || echo "$icon_charging $capacity%" && break
     elif [ $status == "Discharging" ]; then
-        printf "$icon_battery $capacity%%"; 
+        echo "$icon_battery $capacity%"; 
         [[ $capacity -eq 20 || $capacity -eq 10 ]] && notify-send "Battery is low: $capacity%" && break ||
         [ $capacity -le 5 ] && hibernate && break
     fi

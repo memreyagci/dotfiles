@@ -11,7 +11,7 @@ while true; do
         unread_new=$(newsboat -x=print-unread | awk '{print $1}')
 
         [ $unread != $unread_new ] && notify-send "$icon There are $(($unread_new - $unread)) new feed(s)."
-        pkill -RTMIN+11 dwmblocks
+        pkill -RTMIN+11 i3blocks
         exit
     else
         sleep 60
