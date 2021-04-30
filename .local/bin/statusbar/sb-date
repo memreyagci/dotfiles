@@ -1,6 +1,3 @@
 #!/bin/sh
 
-icon_calendar=
-icon_clock=
-
-echo "$(date '+ $icon_calendar %a, %b %d | $icon_clock %I:%M%p ')"
+echo "$(date '+ %a, %b %d |  %I:%M%p ')"
