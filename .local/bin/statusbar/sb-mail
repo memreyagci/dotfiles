@@ -1,9 +1,6 @@
 #!/bin/sh
 
-pango_start="<span font=\"Font Awesome 5 Pro Solid 9\">"
-pango_end="</span>"
-
-icon_mail="$pango_start$pango_end"
+icon_mail=
 
 unread="$(find $HOME/Documents/mail/*/[Ii][Nn][Bb][Oo][Xx]/new/* -type f 2>/dev/null | wc -l 2>/dev/null)"
 

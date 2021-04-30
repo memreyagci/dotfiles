@@ -1,14 +1,6 @@
 #!/bin/sh
 
-pango_start="<span font=\"Font Awesome 5 Pro Solid 9\">"
-pango_end="</span>"
+icon_calendar=
+icon_clock=
 
-icon_calendar="$pango_start$pango_end"
-icon_clock="$pango_start$pango_end"
-
-date=$(date '+%a, %b %d')
-clock=$(date '+%I:%M%p')
-
-echo "$icon_calendar $date | $icon_clock $clock "
-
-#echo "$(date '+ '$icon_calendar' %a, %b %d | '$icon_clock' %I:%M%p ')"
+echo "$(date '+ $icon_calendar %a, %b %d | $icon_clock %I:%M%p ')"

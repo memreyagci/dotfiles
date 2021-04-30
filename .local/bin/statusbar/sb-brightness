@@ -1,10 +1,7 @@
 #!/bin/sh
 
-pango_start="<span font=\"Font Awesome 5 Pro Solid 9\">"
-pango_end="</span>"
-
-icon_lightbulb="$pango_start$pango_end"
-icon_monitor="$pango_start$pango_end"
+icon_lightbulb=
+icon_monitor=
 
 brightness=$(xbacklight -get 2>/dev/null | sed 's/\..*//')
 

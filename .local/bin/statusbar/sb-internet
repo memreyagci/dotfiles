@@ -1,12 +1,9 @@
 #!/bin/sh
 
-pango_start="<span font=\"Font Awesome 5 Pro Solid 9\">"
-pango_end="</span>"
-
-icon_wifi="$pango_start$pango_end"
-icon_ethernet="$pango_start$pango_end"
-icon_wifi_disconnected="$pango_start$pango_end"
-icon_ethernet_disconnected="$pango_start$pango_end"
+icon_wifi=
+icon_ethernet=
+icon_wifi_disconnected=
+icon_ethernet_disconnected=
 
 IFS=$'\n'
 
