@@ -4,7 +4,6 @@ udiskie &
 xautolock -time 3 -locker slock -m \"Locked at $(date +'%I:%M %p')\" &
 xcompmgr &
 check-hostname
-setxkbmap -option 'grp:alt_shift_toggle'
 set-bg
 signal-desktop --start-in-tray &
 sxhkd &

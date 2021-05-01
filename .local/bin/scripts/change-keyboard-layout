@@ -1,0 +1,21 @@
+#!/bin/sh
+
+chosen=$(echo -e "English (UK)\nEnglish (US)\nTurkish\nArabic" | dmenu -i -p "Choose a keyboard layout.")
+
+case $chosen in
+    "English (UK)")
+        setxkbmap gb
+        ;;
+
+    "English (US)")
+        setxkbmap us
+        ;;
+
+    "Turkish")
+        setxkbmap tr
+        ;;
+
+    "Arabic")
+        setxkbmap ara
+        ;;
+esac

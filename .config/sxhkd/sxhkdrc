@@ -4,6 +4,9 @@ super + shift + Return
 super + shift + q
     power-management-options
 
+super + shift + Tab
+    change-keyboard-layout
+
 super + w
     $BROWSER
 
@@ -23,10 +26,10 @@ super + Print
     flameshot gui
 
 XF86Audio{Mute,MicMute,RaiseVolume,LowerVolume}
-    pactl{ set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+10 i3blocks, set-source-mute @DEFAULT_SOURCE@ toggle; pkill -RTMIN+10 i3blocks,-increase; pkill -RTMIN+10 i3blocks, set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+10 i3blocks}
+    pactl{ set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+10 dwmblocks, set-source-mute @DEFAULT_SOURCE@ toggle; pkill -RTMIN+10 dwmblocks,-increase; pkill -RTMIN+10 dwmblocks, set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+10 dwmblocks}
 
 XF86MonBrightness{Up,Down}
-    xbacklight {-inc 5; pkill -RTMIN+5 i3blocks,-dec 5; pkill -RTMIN+5 i3blocks}
+    xbacklight {-inc 5; pkill -RTMIN+5 dwmblocks,-dec 5; pkill -RTMIN+5 dwmblocks}
 
 super + f
     st -e lfrun
