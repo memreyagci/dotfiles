@@ -14,7 +14,7 @@ super + d
     dmenu_run
 
 super + e
-    /home/musa/.local/bin/cronjobs/cj-mail; st -e neomutt; /home/musa/.local/bin/cronjobs/cj-mail
+    $TERMINAL -e email
 
 super + x
     slock -m "Locked at $(date +'%I:%M %p')"

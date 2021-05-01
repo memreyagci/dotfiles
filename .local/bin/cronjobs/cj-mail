@@ -4,4 +4,4 @@ ping -q -c 1 dd.gg > /dev/null || exit
 
 /usr/bin/mbsync -c /home/musa/.config/isync/mbsyncrc -a 2&>/dev/null
 
-pkill -RTMIN+2 i3blocks 
+pkill -RTMIN+2 dwmblocks 
