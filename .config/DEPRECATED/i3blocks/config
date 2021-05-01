@@ -7,9 +7,8 @@ markup=pango
 [window]
 background=#ABB2BF
 color=#282C34
-min_width=200
-command=xtitle -s
-interval=persist
+command=xdotool getactivewindow getwindowname
+interval=0.2
 
 [separator]
 
