@@ -19,6 +19,12 @@ export \
     XINITRC=$XDG_CONFIG_HOME/x11/xinitrc \
     ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
+export \
+    CM_SELECTIONS="clipboard" \
+    CM_MAX_CLIPS=4 \
+    CM_HISTLENGTH=4 \
+    CM_IGNORE_WINDOW="Bitwarden"
+
 export LF_ICONS="\
 tw=:\
 st=:\

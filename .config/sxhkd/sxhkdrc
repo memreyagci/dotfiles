@@ -13,8 +13,11 @@ super + w
 super + d
     dmenu_run
 
+super + c
+    clipmenu
+
 super + e
-    $TERMINAL -e email
+    cj-mail; $TERMINAL -e neomutt; cj-mail; pkill -RTMIN+2 dwmblocks
 
 super + x
     slock -m "Locked at $(date +'%I:%M %p')"

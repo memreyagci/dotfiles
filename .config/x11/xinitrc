@@ -6,6 +6,7 @@ xcompmgr &
 check-hostname
 set-bg
 signal-desktop --start-in-tray &
+clipmenud &
 sxhkd &
 dwmblocks &
 exec dwm
