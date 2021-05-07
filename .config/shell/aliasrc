@@ -8,7 +8,7 @@ alias \
     ls="exa -l --group-directories-first --color=auto --group" \
     mkdir="mkdir -pv" \
     mv="mv -iv" \
-    neomutt="cj-mail; neomutt; cj-mail; pkill -RTMIN+2 dwmblocks" \
+    neomutt="cj-mail; /usr/bin/neomutt; cj-mail; pkill -RTMIN+2 dwmblocks" \
     newsboat="newsboat; pkill -RTMIN+11 dwmblocks" \
     ovim="nvim \$(fzf -e)" \
     rm="rm -vI" \
