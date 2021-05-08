@@ -11,9 +11,9 @@ x-scheme-handler/http=$BROWSER
 x-scheme-handler/https=$BROWSER
 x-scheme-handler/mailto=userapp-Thunderbird-Y6FIT0.desktop
 x-scheme-handler/msteams=teams.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-LRSVY0.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-6JL120.desktop
 
 [Added Associations]
 message/rfc822=userapp-Thunderbird-Y6FIT0.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-Y6FIT0.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-LRSVY0.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-LRSVY0.desktop;userapp-Telegram Desktop-6JL120.desktop;
