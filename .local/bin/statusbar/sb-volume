@@ -8,10 +8,10 @@ icon_high=
 icon_microphone=
 icon_microphone_off=
 
-volume=$(pactl list sinks | grep '^[[:space:]]Volume:' | \
-    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
+volume=$(pulsemixer --get-volume | awk '{print $1}')
+is_mute=$(pulsemixer --get-mute)
 
-if [ "$(pactl list sinks | grep 'Mute: yes')" ]; then
+if [ "$is_mute" == "1" ]; then
     output="$output$icon_muted  "
 elif [ $volume -ge 75 ]; then
     output="$output$icon_high $volume% "
@@ -21,8 +21,12 @@ else
     output="$output$icon_low $volume% "
 fi
 
-[ "$(pactl list sources | grep -A 10 'Source #1' | grep 'Mute: no')" ] &&
-    output="$output | $icon_microphone $(pactl list sources | grep -A 10 'Source #1' | grep 'Volume' | awk -F/ '{print $2}' | sed 's/ //g')" ||
-    output="$output | $icon_microphone_off"
+microphone=$(pulsemixer --list-sources | grep "Default")
+if [ "$(echo $microphone | grep 'Mute: 1')" ]; then
+    output="$output | $icon_microphone_off" 
+else
+    mic_volume=$(echo $microphone | cut -d"'" -f 2)
+    output="$output | $icon_microphone $mic_volume"
+fi
 
 echo $output
