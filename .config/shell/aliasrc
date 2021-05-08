@@ -2,7 +2,7 @@
 
 alias \
     cp="cp -iv" \
-    dotfiles="/usr/bin/git --git-dir=$HOME/Documents/repos/dotfiles --work-tree=$HOME" \
+    dotfiles="/usr/bin/git --git-dir=$HOME/documents/repos/dotfiles --work-tree=$HOME" \
     email="neomutt" \
     irssi="irssi --config=$HOME/.config/irssi/config" \
     ls="exa -l --group-directories-first --color=auto --group" \
