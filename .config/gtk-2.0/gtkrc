@@ -4,7 +4,7 @@
 include "/home/musa/.gtkrc-2.0.mine"
 gtk-theme-name="Ant-Dracula"
 gtk-icon-theme-name="hicolor"
-gtk-font-name="Open Sans 11"
+gtk-font-name="Fira Code weight=450 11"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
