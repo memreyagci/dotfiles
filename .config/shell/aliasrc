@@ -2,6 +2,7 @@
 
 alias \
     cp="cp -iv" \
+    crepos="cd $HOME/documents/repos" \
     dotfiles="/usr/bin/git --git-dir=$HOME/documents/repos/dotfiles --work-tree=$HOME" \
     email="neomutt" \
     irssi="irssi --config=$HOME/.config/irssi/config" \
