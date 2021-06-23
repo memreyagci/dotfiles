@@ -23,7 +23,7 @@ super + x
     slock -m "Locked at $(date +'%I:%M %p')"
 
 Print
-    flameshot screen -c -p $HOME/Pictures/screenshots
+    flameshot screen -c -p $HOME/pictures/screenshots
 
 super + Print
     flameshot gui
