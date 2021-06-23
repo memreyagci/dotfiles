@@ -1,6 +1,7 @@
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+application/epub+zip=org.pwmt.zathura.desktop
 image/jpeg=sxiv.desktop
 image/jpg=sxiv.desktop
 image/png=sxiv.desktop
