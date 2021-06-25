@@ -17,7 +17,7 @@ super + c
     clipmenu
 
 super + e
-    cj-mail; $TERMINAL -e neomutt; cj-mail; pkill -RTMIN+2 dwmblocks
+    thunderbird
 
 super + x
     slock -m "Locked at $(date +'%I:%M %p')"
@@ -37,8 +37,8 @@ XF86MonBrightness{Up,Down}
 super + f
     st -e lfrun
 
-super + o; {b,s,m,t,e}
-    {bitwarden-desktop,signal-desktop,teams,telegram-desktop,thunderbird}
+super + o; {b,s,m,t}
+    {bitwarden-desktop,signal-desktop,teams,telegram-desktop}
 
 super + r; {d,s}
     {pkill -9 dwmblocks; dwmblocks, pkill -9 sxhkd; sxhkd}

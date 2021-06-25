@@ -4,12 +4,10 @@ alias \
     cp="cp -iv" \
     crepos="cd $HOME/documents/repos" \
     dotfiles="/usr/bin/git --git-dir=$HOME/documents/repos/dotfiles --work-tree=$HOME" \
-    email="neomutt" \
     irssi="irssi --config=$HOME/.config/irssi/config" \
     ls="exa -l --group-directories-first --color=auto --group" \
     mkdir="mkdir -pv" \
     mv="mv -iv" \
-    neomutt="cj-mail; /usr/bin/neomutt; cj-mail; pkill -RTMIN+2 dwmblocks" \
     newsboat="newsboat; pkill -RTMIN+11 dwmblocks" \
     ovim="nvim \$(fzf -e)" \
     rm="rm -vI" \

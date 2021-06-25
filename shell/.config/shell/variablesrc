@@ -4,7 +4,6 @@ export \
     BROWSER=firefox \
     CARGO_HOME=$XDG_CONFIG_HOME/cargo \
     EDITOR=nvim \
-    EMAIL=neomutt \
     GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc \
     HISTFILE=$XDG_CONFIG_HOME/bash/history \
     IPYTHONDIR=$XDG_CONFIG_HOME/jupyter \
