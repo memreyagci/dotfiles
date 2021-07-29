@@ -3,10 +3,10 @@ flameshot &
 udiskie &
 xautolock -time 3 -locker slock -m \"Locked at $(date +'%I:%M %p')\" &
 xcompmgr &
-check-hostname
 set-bg
 signal-desktop --start-in-tray &
 clipmenud &
 sxhkd &
+nm-applet &
 dwmblocks &
 exec dwm
