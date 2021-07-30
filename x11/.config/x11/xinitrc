@@ -3,7 +3,7 @@ flameshot &
 udiskie &
 xautolock -time 3 -locker slock -m \"Locked at $(date +'%I:%M %p')\" &
 xcompmgr &
-set-bg
+xwallpaper --maximize $HOME/pictures/wallpapers/wp
 signal-desktop --start-in-tray &
 clipmenud &
 sxhkd &
