@@ -4,34 +4,31 @@ abortion() {
     echo "Aborting.." && exit
 }
 
+REPOS_DIR="$HOME/documents/repos"
+
+repos_to_check=(
+    "dwm"
+    "dwmblocks"
+    "dmenu"
+    "st"
+)
+
+CHECKED="✅"
+CROSS="❌"
+
 cd $HOME/.dotfiles
 
-git_status=$(git status | head -2 | tail -1)
+[[ "$(git status | head -4 | tail -1)" != "nothing to commit, working tree clean" ]] && echo "$CROSS You have uncommitted changes for your dotfiles." || echo "$CHECKED Dotfiles are checked."
 
-if [ "$git_status" != "Your branch is up to date with 'origin/master'." ]; then
-    echo "You have uncommitted changes for your dotfiles. (I)gnore or Exit (any key)?"
-    read ans1
-    [[ "$ans1" == "I" || "$ans1" == "i" ]] && echo "Ignoring the uncommitted changes.." || abortion
-fi
+for REPO in "${repos_to_check[@]}"; do
+    cd $REPOS_DIR/$REPO
+    [[ "$(git status | head -4 | tail -1)" != "nothing to commit, working tree clean" ]] && echo "$CROSS You have uncommitted changes for $REPO repository." || echo "$CHECKED $REPO is checked."
+done
 
-echo -e "\n"
-echo "Did you back up your RSS feed list? (Y)es/No(any key)"
-read ans2
-[[ "$ans2" == "Y" || "$ans2" == "y" ]] && echo "RSS feed list is backed up. Continuing.." || abortion
+echo -e "\nDid you back up your RSS feed list?"
+echo "Did you back up your bookmarks?"
+echo "Did you check your home directory?"
+echo "Did you take a backup of your documents directory?"
+echo "Does your Ansible configuration include all the new packages?"
 
-echo -e "\n"
-echo "Did you check your home directory? (Y)es/No(any key)"
-read ans3
-[[ "$ans2" == "Y" || "$ans2" == "y" ]] && echo "Home directory is checked. Continuing.." || abortion
-
-echo -e "\n"
-echo "Did you take a backup of your documents directory? (Y)es/No(any key)"
-read ans4
-[[ "$ans2" == "Y" || "$ans2" == "y" ]] && echo "Documents directory is backed up. Continuing.." || abortion
-
-echo -e "\n"
-echo "Does your Ansible configuration include all the new packages? (Y)es/No(any key)"
-read ans5
-[[ "$ans2" == "Y" || "$ans2" == "y" ]] && echo "Ansible configuration is done. Continuing.." || abortion
-
-echo -e "\nEverything is checked. You can safely install your new system now."
+#echo -e "\nEverything is checked. You can safely install your new system now."
