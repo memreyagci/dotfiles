@@ -30,3 +30,7 @@ else
 fi
 
 echo $output
+
+case $BUTTON in
+    1) pavucontrol ;;
+esac
