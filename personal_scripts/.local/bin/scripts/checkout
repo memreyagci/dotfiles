@@ -30,4 +30,5 @@ $QUESTION_MARK RSS feed list backup.
 $QUESTION_MARK Bookmarks backup.
 $QUESTION_MARK Documents directory backup.
 $QUESTION_MARK Home directory.
+$QUESTION_MARK Browser configuration.
 $QUESTION_MARK Whether the Ansible configuration includes all the new changes in your system, like packages."
