@@ -4,6 +4,9 @@ abortion() {
     echo "Aborting.." && exit
 }
 
+CHECKED="✅"
+CROSS="❌"
+QUESTION_MARK="❓"
 REPOS_DIR="$HOME/documents/repos"
 
 repos_to_check=(
@@ -11,13 +14,10 @@ repos_to_check=(
     "dwmblocks"
     "dmenu"
     "st"
+    "ansible-workstation"
 )
 
-CHECKED="✅"
-CROSS="❌"
-
 cd $HOME/.dotfiles
-
 [[ "$(git status | head -4 | tail -1)" != "nothing to commit, working tree clean" ]] && echo "$CROSS You have uncommitted changes for your dotfiles." || echo "$CHECKED Dotfiles are checked."
 
 for REPO in "${repos_to_check[@]}"; do
@@ -25,10 +25,9 @@ for REPO in "${repos_to_check[@]}"; do
     [[ "$(git status | head -4 | tail -1)" != "nothing to commit, working tree clean" ]] && echo "$CROSS You have uncommitted changes for $REPO repository." || echo "$CHECKED $REPO is checked."
 done
 
-echo -e "\nDid you back up your RSS feed list?"
-echo "Did you back up your bookmarks?"
-echo "Did you check your home directory?"
-echo "Did you take a backup of your documents directory?"
-echo "Does your Ansible configuration include all the new packages?"
-
-#echo -e "\nEverything is checked. You can safely install your new system now."
+echo -e "\nSome of the things you might want to check:
+$QUESTION_MARK RSS feed list backup.
+$QUESTION_MARK Bookmarks backup.
+$QUESTION_MARK Documents directory backup.
+$QUESTION_MARK Home directory.
+$QUESTION_MARK Whether the Ansible configuration includes all the new changes in your system, like packages."
