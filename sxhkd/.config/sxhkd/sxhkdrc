@@ -22,6 +22,9 @@ super + e
 super + x
     slock -m "Locked at $(date +'%I:%M %p')"
 
+super + p
+    ph --database .local/share/passhole/Passwords.kdbx type --tabbed --prog "dmenu -i"
+
 Print
     flameshot screen -c -p $HOME/pictures/screenshots
 
