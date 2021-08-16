@@ -1,3 +1,4 @@
 bash/.config/bash/history
 newsboat/.config/newsboat/urls
 zsh/.config/zsh/.zcompdump
+personal_scripts/.local/bin/__pycache__/
