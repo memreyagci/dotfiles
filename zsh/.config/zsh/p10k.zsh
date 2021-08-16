@@ -31,8 +31,8 @@
 
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-    os_icon                 # os identifier
-    context
+    #os_icon                 # os identifier
+    #context
     dir                     # current directory
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     vcs                     # git status
