@@ -15,7 +15,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 bind '"\C-l": clear-screen'
 set -o vi # Vim mode for bash
 shopt -s autocd # Auto cd when a directory name is typed
-HISTFILE=$XDG_CONFIG_HOME/shell/bash_history
+HISTFILE=$XDG_CONFIG_HOME/bash/bash_history
 
 LFCD="$XDG_CONFIG_HOME/lf/lfcd.sh" #  pre-built binary, make sure to use absolute path
 if [ -f "$LFCD" ]; then
