@@ -14,7 +14,7 @@ repos_to_check=(
     "dwmblocks"
     "dmenu"
     "st"
-    "ansible-workstation"
+    "workstation-installation-script"
 )
 
 cd $HOME/.dotfiles
