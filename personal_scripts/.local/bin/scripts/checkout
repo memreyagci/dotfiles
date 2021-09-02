@@ -27,6 +27,7 @@ done
 
 echo -e "\nSome of the things you might want to check:
 $QUESTION_MARK RSS feed list backup.
+$QUESTION_MARK Cronjobs backup.
 $QUESTION_MARK Bookmarks backup.
 $QUESTION_MARK Documents directory backup.
 $QUESTION_MARK pictures directory backup.

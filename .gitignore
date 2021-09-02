@@ -5,4 +5,7 @@ newsboat/.config/newsboat/urls
 zsh/.config/zsh/.zcompdump
 
 personal_scripts/.local/bin/*
-!personal_scripts/.local/bin/{applications,cronjobs,scripts,statusbar}
+!personal_scripts/.local/bin/applications
+!personal_scripts/.local/bin/cronjobs
+!personal_scripts/.local/bin/scripts
+!personal_scripts/.local/bin/statusbar
