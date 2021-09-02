@@ -1,4 +1,8 @@
 bash/.config/bash/history
+
 newsboat/.config/newsboat/urls
+
 zsh/.config/zsh/.zcompdump
-personal_scripts/.local/bin/__pycache__/
+
+personal_scripts/.local/bin/*
+!personal_scripts/.local/bin/{applications,cronjobs,scripts,statusbar}
