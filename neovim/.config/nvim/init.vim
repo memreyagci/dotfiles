@@ -1,4 +1,5 @@
 syntax on
+filetype plugin on
 
 set clipboard+=unnamedplus
 set expandtab
@@ -10,7 +11,8 @@ set relativenumber
 set shiftwidth=4
 set smartcase
 set smartindent
-set tabstop=4 softtabstop=4
+set tabstop=4 
+set softtabstop=4
 set termguicolors
 set background=dark
 
