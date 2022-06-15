@@ -1,8 +1,0 @@
-#!/bin/sh
-
-icon=
-
-while true; do
-    [ -z "$(pgrep -x newsboat)" ] && echo "$icon $(newsboat -x=print-unread | awk '{print $1}')" && exit || sleep 60
-done
-

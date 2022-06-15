@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 export XDG_CONFIG_HOME=$HOME/.config 
+export HISTFILE=$XDG_CONFIG_HOME/bash/history
     
 # Source files from $XDG_CONFIG_HOME/shell
 [ -f "$XDG_CONFIG_HOME/bash/promptrc" ] && source "$XDG_CONFIG_HOME/bash/promptrc" # Bash prompt
@@ -15,9 +16,3 @@ export XDG_CONFIG_HOME=$HOME/.config
 bind '"\C-l": clear-screen'
 set -o vi # Vim mode for bash
 shopt -s autocd # Auto cd when a directory name is typed
-HISTFILE=$XDG_CONFIG_HOME/bash/bash_history
-
-LFCD="$XDG_CONFIG_HOME/lf/lfcd.sh" #  pre-built binary, make sure to use absolute path
-if [ -f "$LFCD" ]; then
-    source "$LFCD"
-fi

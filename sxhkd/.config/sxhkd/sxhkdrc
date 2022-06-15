@@ -1,47 +1,22 @@
-super + shift + Return
-    $TERMINAL
+#####################
+## MENU
+#####################
+super + a
+    rofi -show drun -show-icons -disable-history
 
-super + shift + q
-    power-management-options
-
-super + shift + Tab
-    change-keyboard-layout
-
-super + w
-    $BROWSER
-
-super + d
-    dmenu_run
-
-super + c
-    clipmenu
-
-super + e
-    thunderbird
-
-super + x
-    slock -m "Locked at $(date +'%I:%M %p')"
-
-super + p
-    ph --database .local/share/passhole/Passwords.kdbx type --tabbed --prog "dmenu -i"
+#####################
+## FAVOURITE APPS
+#####################
+#super + shift + b
+    #buku_run
 
 Print
     flameshot screen -c -p $HOME/pictures/screenshots
-
 super + Print
     flameshot gui
 
-XF86Audio{Mute,MicMute,RaiseVolume,LowerVolume}
-    pactl{ set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+10 dwmblocks, set-source-mute @DEFAULT_SOURCE@ toggle; pkill -RTMIN+10 dwmblocks,-increase; pkill -RTMIN+10 dwmblocks, set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+10 dwmblocks}
+super + t
+    $TERMINAL
 
-XF86MonBrightness{Up,Down}
-    xbacklight {-inc 5; pkill -RTMIN+5 dwmblocks,-dec 5; pkill -RTMIN+5 dwmblocks}
-
-super + f
-    st -e lfrun
-
-super + o; {b,s,m,t}
-    {bitwarden-desktop,signal-desktop,teams,telegram-desktop}
-
-super + r; {d,s}
-    {pkill -9 dwmblocks; dwmblocks, pkill -9 sxhkd; sxhkd}
+super + w
+    $BROWSER

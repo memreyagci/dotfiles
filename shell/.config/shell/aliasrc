@@ -1,18 +1,21 @@
 #!/bin/sh
 
+# basic shell commands 
 alias \
     cp="cp -iv" \
-    crepos="cd $HOME/documents/repos" \
-    irssi="irssi --config=$HOME/.config/irssi/config" \
-    ls="exa -l --group-directories-first --color=auto --group" \
     mkdir="mkdir -pv" \
     mv="mv -iv" \
-    newsboat="newsboat; pkill -RTMIN+11 dwmblocks" \
-    ovim="nvim \$(fzf -e)" \
-    rm="rm -vI" \
-    um="udiskie-mount" \
-    uu="udiskie-umount" \
-    v="nvim" \
+    ls="exa -l --group-directories-first --color=auto --group" \
+    rm="rm -vI"
+
+# python virtual environment
+alias \
     vea=". venv/bin/activate" \
     ved="deactivate" \
     wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts" 
+
+# others
+alias \
+    cr="cd $HOME/documents/repos" \
+    irssi="irssi --config=$HOME/.config/irssi/config"  \
+    news="newsboat"

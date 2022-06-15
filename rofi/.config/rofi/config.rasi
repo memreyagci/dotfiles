@@ -1,0 +1,13 @@
+configuration {
+  case-sensitive: false;
+  drun-match-fields: "name";
+  drun-display-format: " {name}";
+  font: "Fira Code Retina 18";
+  matching: "fuzzy";
+  modi: "window,drun,ssh";
+  padding: 165;
+  show-icons: true;
+  }
+
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+element-icon { size: 1em; }

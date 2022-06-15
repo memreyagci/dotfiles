@@ -1,2 +1,18 @@
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key a open-all-unread-in-browser-and-mark-read
+
+
+#auto-reload yes
+#reload-threads 200
+reload-only-visible-feeds yes
+#define-filter "all feeds except 'title' tag" "tags !# \"title\""
+
 browser "nohup $BROWSER %u >/dev/null"
 macro y set browser "vlc %u &"; open-in-browser ; set browser linkhandler
+
+highlight all "---.*---" yellow
+
+ignore-mode "display"

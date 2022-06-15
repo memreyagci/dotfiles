@@ -1,8 +1,0 @@
-#!/bin/sh
-
-icon_lightbulb=
-icon_monitor=
-
-brightness=$(xbacklight -get 2>/dev/null | sed 's/\..*//')
-
-[ -z $brightness ] && echo "$icon_lightbulb $icon_monitor" || echo "$icon_lightbulb $brightness%"

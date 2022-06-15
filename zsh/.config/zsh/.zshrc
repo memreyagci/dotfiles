@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.config/zsh/histfile
+HISTFILE=~/.config/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd
@@ -23,7 +23,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 [[ ! -f $XDG_CONFIG_HOME/zsh/p10k.zsh ]] || source $XDG_CONFIG_HOME/zsh/p10k.zsh # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 autoload -U compinit
 zstyle ':completion:*' menu select
